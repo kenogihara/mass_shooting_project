@@ -38,7 +38,14 @@ print(shootings.head()[["Title", "Age", "Location", "Incident Area", "Latitude",
 ```
 
 
-| Title                               |   Age | Location               | Incident Area                               |   Latitude |   Fatalities |\n|:------------------------------------|------:|:-----------------------|:--------------------------------------------|-----------:|-------------:|\n| Texas church mass shooting          |    26 | Sutherland Springs, TX | Church                                      |   nan      |           26 |\n| Walmart shooting in suburban Denver |    47 | Thornton, CO           | Wal-Mart                                    |   nan      |            3 |\n| Edgewood businees park shooting     |    37 | Edgewood, MD           | Remodeling Store                            |   nan      |            3 |\n| Las Vegas Strip mass shooting       |    64 | Las Vegas, NV          | Las Vegas Strip Concert outside Mandala Bay |    36.1813 |           59 |\n| San Francisco UPS shooting          |    38 | San Francisco, CA      | UPS facility                                |   nan      |            3 |
+| Title                               | Age | Location               | Incident Area                               | Latitude | Fatalities |
+|:------------------------------------|----:|:-----------------------|:--------------------------------------------|---------:|-----------:|
+| Texas church mass shooting          |  26 | Sutherland Springs, TX | Church                                      | nan      |         26 |
+| Walmart shooting in suburban Denver |  47 | Thornton, CO           | Wal-Mart                                    | nan      |          3 |
+| Edgewood business park shooting     |  37 | Edgewood, MD           | Remodeling Store                            | nan      |          3 |
+| Las Vegas Strip mass shooting       |  64 | Las Vegas, NV          | Las Vegas Strip Concert outside Mandalay Bay |  36.1813 |         59 |
+| San Francisco UPS shooting          |  38 | San Francisco, CA      | UPS facility                                | nan      |          3 |
+
 
 
 ## Data Cleaning and Exploratory Data Analysis
@@ -100,13 +107,26 @@ This step involved extensive data cleaning and preparation to ensure the dataset
 
 Here's the first 5 rows of the updated dataset:
 
-| Title                               | Cause   |   Fatalities |   Latitude |   Longitude | Race   | President Name   |\n|:------------------------------------|:--------|-------------:|-----------:|------------:|:-------|:-----------------|\n| Texas church mass shooting          | unknown |           26 |    29.2737 |    -98.0553 | White  | Donald Trump     |\n| Walmart shooting in suburban Denver | unknown |            3 |    39.868  |   -104.972  | White  | Donald Trump     |\n| Edgewood businees park shooting     | unknown |            3 |    39.4182 |    -76.2941 | Black  | Donald Trump     |\n| Las Vegas Strip mass shooting       | unknown |           59 |    36.1813 |   -115.134  | White  | Donald Trump     |\n| San Francisco UPS shooting          | revenge |            3 |    37.7749 |   -122.419  | Asian  | Donald Trump     |
+| Title                               | Cause   | Fatalities | Latitude | Longitude | Race  | President Name |
+|:------------------------------------|:--------|-----------:|---------:|----------:|:------|:---------------|
+| Texas church mass shooting          | unknown |         26 |   29.2737 |  -98.0553 | White | Donald Trump   |
+| Walmart shooting in suburban Denver | unknown |          3 |   39.8680 | -104.9720 | White | Donald Trump   |
+| Edgewood business park shooting     | unknown |          3 |   39.4182 |  -76.2941 | Black | Donald Trump   |
+| Las Vegas Strip mass shooting       | unknown |         59 |   36.1813 | -115.1340 | White | Donald Trump   |
+| San Francisco UPS shooting          | revenge |          3 |   37.7749 | -122.4190 | Asian | Donald Trump   |
+
 
 ### EDA
 
 Here is a map of all documented mass shootings that occurred in the United States from 1966-2022:
 
-![Mass Shootings Map](assets/mass_shootings_map.html)
+<iframe
+  src="assets/mass_shootings_map.html"
+  width="700"
+  height="500"
+  frameborder="0"
+></iframe>
+
 
 Univariate plot that shows the top 10 states with the most mass shootings:
 
@@ -175,6 +195,12 @@ Here are the steps I took to guide you through my analysis:
 **2. Create Shuffled Data:** I shuffled `Mental Health Issues` randomly and recomputed the test statistic for each shuffled dataset 1000x.
 
 **3. Compute the p-value:** This determined the probability of observing a test statistic as extreme as the one computed from the actual data, assuming the null hypothesis is true.
+
+```py
+print(f"p_value : {p_value}")
+```
+
+p_value: 0.012
 
 <iframe
   src="assets/plot7.html"
@@ -261,21 +287,21 @@ The steps I took for this hypothesis test is the same as the steps I took for my
 
 <iframe
   src="assets/Asian_Latinoplot.html"
-  width="700"
+  width="900"
   height="500"
   frameborder="0"
 ></iframe>
 
 <iframe
   src="assets/Asian_Native Americanplot.html"
-  width="700"
+  width="900"
   height="500"
   frameborder="0"
 ></iframe>
 
 <iframe
   src="assets/Asian_Multiracialplot.html"
-  width="700"
+  width="900"
   height="500"
   frameborder="0"
 ></iframe>
