@@ -4,7 +4,7 @@ Project on Mass Shootings
 By Ken Ogihara
 
 ## Introduction
-There has been over 400 mass shootings in the last 50 years that resulted in over 2000 deaths in the United States. On average, the number of mass shootings per year is 8 for the last 50 years. This dataset is taken from Kaggle and contains information on mass shootings in the United States of America. My main research question I will be answering is, "What characteristics should the U.S government look into when predicting the next mass shooting? What laws should policymakers implement to prevent future mass shootings?The following columns are useful in our analysis:
+There has been over 400 mass shootings in the last 50 years that resulted in over 2000 deaths in the United States. On average, the number of mass shootings per year is 8 for the last 50 years. This dataset is taken from Kaggle and contains information on mass shootings in the United States of America. My main research question I will be answering is, "What characteristics should the U.S government look into when predicting the next mass shooting? The following columns are useful in our analysis:
 
 ### Columns and Descriptions
 
@@ -243,7 +243,7 @@ shootings["Cause"] = (
 
 Let's recall the main research question:
 
-**What characteristics should the U.S government look into when predicting the next mass shooting? What laws should policymakers implement to prevent future mass shootings?**
+**What characteristics should the U.S government look into when predicting the next mass shooting?**
 
 Previously, we saw that mass shootings caused by Asian perpetrators result in the highest average fatalities. 
 We will test if this is true with permutation testing.
@@ -395,6 +395,7 @@ I then fitted the model to the selected features and generated cluster labels. F
 
 I used **TruncatedSVD** to reduce the dimensionality of the dataset to 2 components for visualization. TruncatedSVD was chosen over PCA because it handles sparse matrices (resulting from one-hot encoding) efficiently. Here are the results:
 
+
 <iframe
   src="assets/clusters.html"
   width="800"
@@ -439,7 +440,3 @@ counterparts. There seems to be a slight correlation in the severity of mass sho
 Finally, there seems to be a slight correlation with the severity of a shooting and the
 year in which it occurred. Recent years tend to have more severe shootings than past years with the exception of 
 cluster 1.
-
-### Implication
-
-**What does this mean for the US government?**
