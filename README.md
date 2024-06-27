@@ -360,7 +360,7 @@ develop a model that creates clusters of data to find hidden patterns and struct
 - I addressed a specific row (323) where `Total victims` and `Injured` had missing values, filling them with the number of fatalities
 
 ### Feature Selection
-I selected the following features to be used in KMeans clustering:
+I selected the following features to be used in KMeans clustering using my intuition. Furthermore, these columns do not contain any missing values.
 
 1. `Cause`
 2. `Fatalities`
