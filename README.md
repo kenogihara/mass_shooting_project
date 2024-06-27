@@ -339,7 +339,7 @@ p_value: 0.00
 
 <iframe
   src="assets/plot8.html"
-  width="700"
+  width="800"
   height="500"
   frameborder="0"
 ></iframe>
@@ -387,7 +387,7 @@ I then fitted the model to the selected features and generated cluster labels. F
 <iframe
   src="assets/ss.html"
   width="800"
-  height="600"
+  height="500"
   frameborder="0"
 ></iframe>
 
